@@ -10,9 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    
+    @IBOutlet weak var button: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        button.addTarget(self, action: #selector(ViewController.buttonTapped), for: .touchUpInside)
+    }
+    
+    @objc func buttonTapped(){
+        print("button click")
     }
 
 
