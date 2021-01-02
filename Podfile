@@ -7,4 +7,5 @@ target 'TCAssignment' do
 
   # Pods for TCAssignment 
   pod 'Alamofire', '~> 5.2'
+  pod 'Kanna', '~> 5.2.2'
 end
