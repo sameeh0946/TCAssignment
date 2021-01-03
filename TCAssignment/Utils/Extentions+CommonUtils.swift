@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 extension String {
-
+    
     func stripOutHtml() -> String? {
         do {
             guard let data = self.data(using: String.Encoding(rawValue: String.Encoding.utf8.rawValue)) else {
@@ -75,5 +75,26 @@ extension UIViewController {
         alert.addAction(action)
         self.present(alert, animated: true, completion: nil)
     }
+}
+
+
+class CustomButton: UIButton {
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupButton()
+    }
+    
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupButton()
+    }
+    
+    
+    func setupButton() {
+        layer.cornerRadius   = 8
+    }
+    
 }
 

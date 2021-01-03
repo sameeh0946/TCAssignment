@@ -11,7 +11,7 @@ import Alamofire
 
 
 class ViewController: UIViewController {
-
+    
     
     @IBOutlet weak var button: UIButton!
     
@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         taskButton.loadingIndicator(show: false)
         button.addTarget(self, action: #selector(ViewController.buttonTapped), for: .touchUpInside)
-    
+        
     }
     
     @objc func buttonTapped(){
@@ -39,9 +39,12 @@ class ViewController: UIViewController {
     }
     
     func scrapeTCBlog() -> Void {
+        
+        //Network request to fetch the content using AlamoFire
+        
         AF.request(Constants.blogUrl).responseString { response in
             //print("check here: \(String(describing: response.value))")
-
+            
             guard let html = response.value else {
                 DispatchQueue.main.async {
                     print("\(Error.self)")
@@ -49,17 +52,17 @@ class ViewController: UIViewController {
                 }
                 
                 return }
-                self.parseHTML(html: html)
-            }
-
+            self.parseHTML(html: html)
         }
+        
+    }
     
-
+    
     func parseHTML(html: String) -> Void {
         
         guard let strippedHtmlString = html.stripOutHtml() else{return}
         self.taskButton.loadingIndicator(show: false)
-        //Task 3
+        // Task 3 Availaing the count of words
         let arrayOfRemovedWhitespaces = strippedHtmlString.removingWhitespaces()
         var newRemovedEmptyElements = [String]()
         for elements in arrayOfRemovedWhitespaces {
@@ -70,7 +73,7 @@ class ViewController: UIViewController {
         print("lastRequest: \(newRemovedEmptyElements.count)")
         thirdLabel.text = String(newRemovedEmptyElements.count)
         
-        //2
+        // Task 2 getting every 10th character
         let stringOfRemovedWhiteSpaces = strippedHtmlString.removingWhitespacesString()
         var i = 9
         var n10thArrays = [String]()
@@ -80,15 +83,14 @@ class ViewController: UIViewController {
         }
         print("secondArrayTask \(n10thArrays)")
         
-        //Converting to comma separetd string
+        //Converting to comma separetd string to display in a scroll view
         secondTextView.text = n10thArrays.joined(separator:",")
         
-        //1
+        //Task 1 getting the 10th element
         let first10thChar = strippedHtmlString[9]
         print("first10thChar \(first10thChar)")
         firstLabel.text = first10thChar
     }
-
-
-
+    
 }
+
