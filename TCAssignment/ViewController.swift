@@ -13,14 +13,12 @@ import Alamofire
 class ViewController: UIViewController {
 
     
-    
     @IBOutlet weak var button: UIButton!
     
     @IBOutlet weak var firstLabel: UILabel!
     
     @IBOutlet weak var secondTextView: UITextView!
     @IBOutlet weak var thirdLabel: UILabel!
-    
     
     @IBOutlet weak var taskButton: UIButton!
     
@@ -31,8 +29,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         taskButton.loadingIndicator(show: false)
         button.addTarget(self, action: #selector(ViewController.buttonTapped), for: .touchUpInside)
-        
-
+    
     }
     
     @objc func buttonTapped(){
@@ -59,8 +56,8 @@ class ViewController: UIViewController {
     
 
     func parseHTML(html: String) -> Void {
+        
         guard let strippedHtmlString = html.stripOutHtml() else{return}
-    
         self.taskButton.loadingIndicator(show: false)
         //3
         let arrayOfRemovedWhitespaces = strippedHtmlString.removingWhitespaces()
