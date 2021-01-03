@@ -8,7 +8,7 @@
 
 import UIKit
 import Alamofire
-import Kanna
+//import Kanna
 
 class ViewController: UIViewController {
 
