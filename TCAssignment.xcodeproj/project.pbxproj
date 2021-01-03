@@ -13,6 +13,8 @@
 		221B2D69259CE10D004E18F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 221B2D68259CE10D004E18F8 /* Assets.xcassets */; };
 		221B2D6C259CE10D004E18F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 221B2D6A259CE10D004E18F8 /* LaunchScreen.storyboard */; };
 		ACE283433B51D545B9FAB7E6 /* Pods_TCAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089D1D5411F8432CF142C36B /* Pods_TCAssignment.framework */; };
+		B859537D25A2472D000F174D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859537C25A2472D000F174D /* Constants.swift */; };
+		B859538025A2473B000F174D /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B859537F25A2473B000F174D /* Extentions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		221B2D6D259CE10D004E18F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C6225DF9C081EE9D983EA65 /* Pods-TCAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCAssignment.release.xcconfig"; path = "Target Support Files/Pods-TCAssignment/Pods-TCAssignment.release.xcconfig"; sourceTree = "<group>"; };
 		9702BFD77BA4AF544453DD85 /* Pods-TCAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCAssignment.debug.xcconfig"; path = "Target Support Files/Pods-TCAssignment/Pods-TCAssignment.debug.xcconfig"; sourceTree = "<group>"; };
+		B859537C25A2472D000F174D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B859537F25A2473B000F174D /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 				221B2D68259CE10D004E18F8 /* Assets.xcassets */,
 				221B2D6A259CE10D004E18F8 /* LaunchScreen.storyboard */,
 				221B2D6D259CE10D004E18F8 /* Info.plist */,
+				B859538225A24743000F174D /* Utils */,
 			);
 			path = TCAssignment;
 			sourceTree = "<group>";
@@ -86,6 +91,15 @@
 				089D1D5411F8432CF142C36B /* Pods_TCAssignment.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B859538225A24743000F174D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B859537F25A2473B000F174D /* Extentions.swift */,
+				B859537C25A2472D000F174D /* Constants.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,8 +217,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B859538025A2473B000F174D /* Extentions.swift in Sources */,
 				221B2D64259CE0F7004E18F8 /* ViewController.swift in Sources */,
 				221B2D60259CE0F7004E18F8 /* AppDelegate.swift in Sources */,
+				B859537D25A2472D000F174D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
