@@ -60,34 +60,35 @@ class ViewController: UIViewController {
     
     func parseHTML(html: String) -> Void {
         
-        guard let strippedHtmlString = html.stripOutHtml() else{return}
         self.taskButton.loadingIndicator(show: false)
         // Task 3 Availaing the count of words
-        let arrayOfRemovedWhitespaces = strippedHtmlString.removingWhitespaces()
+        let arrayOfRemovedWhitespaces = html.removingWhitespaces()
         var newRemovedEmptyElements = [String]()
+        //print("arrayOfRemovedWhitespaces : \(arrayOfRemovedWhitespaces)")
         for elements in arrayOfRemovedWhitespaces {
             if elements.count > 0{
                 newRemovedEmptyElements.append(elements)
             }
         }
+        
         print("lastRequest: \(newRemovedEmptyElements.count)")
-        thirdLabel.text = String(newRemovedEmptyElements.count)
+            self.thirdLabel.text = String(newRemovedEmptyElements.count)
+        
         
         // Task 2 getting every 10th character
-        let stringOfRemovedWhiteSpaces = strippedHtmlString.removingWhitespacesString()
+        let stringOfRemovedWhiteSpaces = html.removingWhitespacesString()
+        print("stringOfRemovedWhiteSpaces \(stringOfRemovedWhiteSpaces)")
         var i = 9
         var n10thArrays = [String]()
-        while i < stringOfRemovedWhiteSpaces.count {
+        repeat {
             n10thArrays.append(stringOfRemovedWhiteSpaces[i])
             i = i + 9
-        }
-        print("secondArrayTask \(n10thArrays)")
-        
+        } while (i < stringOfRemovedWhiteSpaces.count )
         //Converting to comma separetd string to display in a scroll view
-        secondTextView.text = n10thArrays.joined(separator:",")
+        secondTextView.text = n10thArrays.joined(separator:", ")
         
         //Task 1 getting the 10th element
-        let first10thChar = strippedHtmlString[9]
+        let first10thChar = stringOfRemovedWhiteSpaces[9]
         print("first10thChar \(first10thChar)")
         firstLabel.text = first10thChar
     }
