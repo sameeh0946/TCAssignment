@@ -22,6 +22,6 @@ To get the count of words, white spaces is removed and copied to an array using 
 
 
 <div>
-<img src="screenshots/Simulator Screen Shot - iPhone 12 - 2021-01-04 at 09.56.39" width = "200">
-<img src="screenshots/Simulator Screen Shot - iPhone 12 - 2021-01-04 at 09.56.58" width = "200">
+<img src="screenshots/1" width = "200">
+<img src="screenshots/2" width = "200">
 </div>
