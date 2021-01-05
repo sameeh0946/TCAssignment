@@ -1,5 +1,9 @@
 # TCAssignment
 
+The repository consists of a project as an assignment for TrueCaller interview. It scrapes their blog to obtain specific characters which is displayed in a simple UI.
+
+
+
 Brief explanation of the solution : 
 
 Following is a brief description of contents of the projects in the project folders.
