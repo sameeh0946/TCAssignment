@@ -22,6 +22,6 @@ To get the count of words, white spaces is removed and copied to an array using 
 
 
 <div>
-<img src="screenshot/1" width = "200">
-<img src="screenshot/2" width = "200">
+<img src="screenshots/1" width = "200">
+<img src="screenshots/2" width = "200">
 </div>
